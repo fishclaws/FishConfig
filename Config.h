@@ -123,6 +123,11 @@ public:
 	{
 		configFile = "config.txt";
 	}
+
+	Config(const string &configFileName)
+	{
+		configFile = configFileName;
+	}
 	
 	void readValuesFromFile()
 	{
