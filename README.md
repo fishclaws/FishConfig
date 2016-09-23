@@ -28,9 +28,9 @@ class Square : public Configurable
 };
 ...
 auto square = new Square("Square", config);
-square->me()["dimensions"]["width"].asInt = 10;       //changes width property to 10
-square->me()["dimensions"]["width"].as<int>();        //"as" method available for other types
-square->me()["dimensions"].as<std::vector<float>>();  //only works if all children are floats
+square->me()["dimensions"]["width"].asInt = 10;       			//changes width property to 10
+auto width = square->me()["dimensions"]["width"].as<int>();        	//"as" method available for other types
+auto dimensions = square->me()["dimensions"].as<std::vector<float>>();  //only works if all children are floats
 ...
 config->addVariable("version")->value = "1.0.1";      //all variables have a "value" string
                                                       //if directly set like this, the as*** variables are not available
