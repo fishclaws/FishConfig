@@ -22,8 +22,8 @@ class Square : public Configurable
 	  create(name);                 //Object has inserted itself into "conf" 
 	  self()->create("dimensions")
   	    ->insert("width", ".1")   
-    	->also("height", ".4");     //"also" useful for not rewriting entire statement for every tree element
-    self()->insert("color", "yellow");
+    		->also("height", ".4");     //"also" useful for not rewriting entire statement for every tree element
+    	  self()->insert("color", "yellow");
 	}
 };
 ...
